@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "dac.h"
+#include "../dac.h"
 
 struct person {
 	char *name;
@@ -43,4 +43,10 @@ int main(void)
 	dac_push(people, dante);
 
 	print_people(people);
+
+	dac_free(jone.kids);
+	dac_free(joel.kids);
+	dac_free(dante.kids);
+
+	dac_free(people);
 }
